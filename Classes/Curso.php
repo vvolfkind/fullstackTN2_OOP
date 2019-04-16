@@ -5,7 +5,7 @@ class Curso
     private $nombre;
     private $turno;
     private $modalidad;
-    private $comision = array();
+    private $comision;
 
     public function __construct($nombre, $turno, $modalidad)
     {
@@ -17,5 +17,15 @@ class Curso
     public function altaAlumnos($alumno)
     {
         $this->comision[] = $alumno;
+    }
+
+    public function getComision()
+    {
+        return $this->comision;
+    }
+
+    public function setTurno($turno)
+    {
+        $this->turno = $turno;
     }
 }
