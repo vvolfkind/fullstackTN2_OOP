@@ -28,3 +28,7 @@
 
     $android->setTurno('Mañana');
     dump($android);
+
+    $dani = new ProfesorTitular('Daniel Fuentes', 1, 'dfuentes@digitalhouse.com', 30);
+
+    dump($dani);

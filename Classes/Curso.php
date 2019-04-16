@@ -6,6 +6,8 @@ class Curso
     private $turno;
     private $modalidad;
     private $comision;
+    private $profesorTitular;
+    private $profesorAyudante;
 
     public function __construct($nombre, $turno, $modalidad)
     {
