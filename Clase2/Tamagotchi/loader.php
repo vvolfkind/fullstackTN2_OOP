@@ -8,9 +8,13 @@ require 'Sediento.php';
 require 'Triste.php';
 require 'Tamagotchi.php';
 
-$estado = new Hambriento();
-$tam = new Tamagotchi($estado);
+/**
+ * Esto es lo que se hizo en clase.
+ */
+//$estado = new Hambriento();
+//$tam = new Tamagotchi($estado);
 
-// var_dump($tam->comer());
+// Tendria mas sentido hacerlo asi
+$tam = new Tamagotchi(new Hambriento());
 
-var_dump($tam);
+dd($tam);
