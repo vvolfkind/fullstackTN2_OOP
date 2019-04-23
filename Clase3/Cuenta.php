@@ -18,7 +18,7 @@ abstract class Cuenta
         $this->balance = $this->balance + $monto;
         $this->setUltimoMovimiento();
         echo 'Acreditado: ' . $monto . '<br>';
-        echo 'Saldo ' . $this->getBalance() . '.';
+        echo 'Saldo ' . $this->balance . '.';
     }
 
     private function setUltimoMovimiento()
