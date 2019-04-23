@@ -16,18 +16,16 @@ abstract class Cuenta
     public function acreditar($monto)
     {
         $this->balance = $this->balance + $monto;
-       // $this->setUltimoMovimiento();
-        $this->ultimoMovimiento = date("F j, Y, g:i a");
+        $this->setUltimoMovimiento();
         echo 'Acreditado: ' . $monto . '<br>';
-        echo 'Saldo ' . $this->balance . '.';
+        echo 'Saldo ' . $this->getBalance() . '.';
     }
 
     private function setUltimoMovimiento()
     {
-        $fecha = date("F j, Y, g:i a");
+        $fecha = date('D-M-Y');
         $this->ultimoMovimiento = $fecha;
     }
-
 
 
 }
