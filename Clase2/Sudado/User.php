@@ -1,16 +1,16 @@
 <?php
 
-class User 
+abstract class User 
 {
-    private $nombre;
-    private $email;
-    private $password;
+    protected $nombre;
+    protected $email;
+    protected $password;
 
-    public function __construct($a, $b, $c)
+    public function __construct($nombre, $email, $password)
     {
-        $this->nombre = $a;
-        $this->email = $b;
-        $this->password = $c;
+        $this->nombre = $nombre;
+        $this->email = $email;
+        $this->password = $password;
     }
 
     /**
@@ -61,15 +61,5 @@ class User
         return $this->password;
     }
 
-    /**
-     * Set the value of password
-     *
-     * @return  self
-     */ 
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
+    abstract public function setPassword($password);
 }
