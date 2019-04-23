@@ -7,7 +7,7 @@ class Platinum extends Cuenta
         parent::__construct($cbu);
     }
 
-    public function debitar($monto, $origen)
+    public function acreditar($monto, $origen)
     {
         if($this->balance >= 5000){
             $this->balance = $this->balance - $monto;
