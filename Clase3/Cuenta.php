@@ -13,19 +13,12 @@ abstract class Cuenta
 
     abstract public function debitar($monto, $origen);
 
-    public function acreditar($monto)
-    {
-        $this->balance = $this->balance + $monto;
-        $this->setUltimoMovimiento();
-        echo 'Acreditado: ' . $monto . '<br>';
-        echo 'Saldo ' . $this->balance . '.';
-    }
+    abstract public function acreditar($monto);
 
-    private function setUltimoMovimiento()
+    protected function setUltimoMovimiento()
     {
         $fecha = date('D-M-Y');
         $this->ultimoMovimiento = $fecha;
     }
-
 
 }

@@ -49,6 +49,6 @@ class Tamagotchi
 
     public function mimos()
     {
-        $this->estado->estimulo_mimos();
+        $this->estado = $this->estado->estimulo_mimos();
     }
 }

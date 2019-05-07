@@ -5,8 +5,9 @@ if($_POST) {
     $nombre = $_POST['nombre'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-
-    $usuario = new User($nombre, $email, $password);
+    $validator = new Validator();
+    $errores = $validator->validate($_POST);
+    //$usuario = new User($nombre, $email, $password);
 
     var_dump($usuario);
     exit;

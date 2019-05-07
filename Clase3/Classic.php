@@ -35,3 +35,6 @@ class Classic extends Cuenta
     }
 }
 
+
+
+// "utm_source=cointelegraph.com&utm_medium=banner&utm_campaign=100dogecoin&utm_content=373X390m"
